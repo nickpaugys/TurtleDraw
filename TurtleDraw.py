@@ -25,11 +25,11 @@ def close_window():
 
 turtleWindow.onkey(close_window, 'Return')
 turtleWindow.listen()
-
+'''
 def distance_formula(point1, point2):
     magnitude = math.sqrt((point2[0] - point1[0]) ** 2 + (point2[1] - point1[1]) **2)
     return magnitude
-
+'''
 green = 0
 blue = 0
 black = 0
@@ -41,7 +41,7 @@ black_value = 0
 
 previous_data = 0
 current_data = 0
-
+'''
 def distance_by_color(point1, point2):
     if segments[0] == "green":
         green_value = distance_formula(point1, point2)
@@ -61,15 +61,15 @@ def distance_by_color(point1, point2):
     
     else:
         pass
-        
-         
+'''       
+'''        
 def calculate_total_distance(points):
     total_distance = 0
     for i in range(len(points) - 1):
         distance = distance_formula(points[i], points[i + 1])
         total_distance += distance
     return total_distance
-
+'''
 while line:
     print(line, end="")
     segments = line.split(' ')
@@ -86,9 +86,9 @@ while line:
     
     elif (len(segments) != 3):
         nickTheTurtle.penup()
-
+    '''
     distance_by_color(previous_data, current_data)
-    
+    '''
     previous_data = current_data
 
     line = turtleDrawTextfile.readline()
@@ -99,5 +99,8 @@ print(f"\n\nTotal distance of blue lines: {blue_value}")
 print(f"\nTotal distance of green lines: {green_value}")
 print(f"\nTotal distance of red lines: {red_value}")
 print(f"\nTotal distance of black lines: {black_value}")
+print("\nTotal distance traveled: ")
+'''
 print(F"\nTotal distance traveled by nickTheTurtle: {calculate_total_distance}")
+'''
 print("\nTurtle Draw Complete.")
